@@ -20,7 +20,7 @@ COPY web/store ./store
 
 RUN yarn build
 
-FROM node:16-alpine
+FROM node:16-alpine@sha256:1298fd170c45954fec3d4d063437750f89802d72743816663664cfe9aa152b4b
 
 RUN apk add --no-cache dumb-init
 
