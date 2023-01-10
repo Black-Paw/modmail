@@ -1,4 +1,4 @@
-FROM rust:1.60-alpine AS builder
+FROM rust:1.60-alpine@sha256:b38a9e55db25b29d9320c7e04f2ddd688ac68b8582adb3070230d3b7d2f183ae AS builder
 
 RUN apk add --no-cache musl-dev openssl-dev
 
@@ -15,7 +15,7 @@ COPY web/src ./src
 
 RUN cargo build --release
 
-FROM alpine:latest
+FROM alpine:latest@sha256:f271e74b17ced29b915d351685fd4644785c6d1559dd1f2d4189a5e851ef753a
 
 RUN apk add --no-cache dumb-init
 
