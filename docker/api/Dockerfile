@@ -1,4 +1,4 @@
-FROM rust:1.60-alpine AS builder
+FROM rust:1.60-alpine@sha256:b38a9e55db25b29d9320c7e04f2ddd688ac68b8582adb3070230d3b7d2f183ae AS builder
 
 RUN apk add --no-cache musl-dev openssl-dev
 
