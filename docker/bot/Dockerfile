@@ -1,4 +1,4 @@
-FROM rust:1.60-slim-buster AS builder
+FROM rust:1.60-slim-buster@sha256:c0c5d46db0e7c3860538840bccce80d3fa43179159f88a8ae786030539cdcb9c AS builder
 
 RUN apt update && apt install -y musl-dev libpq-dev
 
