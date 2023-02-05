@@ -8,7 +8,7 @@ WORKDIR /build
 
 RUN cp /usr/local/cargo/bin/diesel ./
 
-FROM python:3.10-slim-buster
+FROM python:3.10-slim-buster@sha256:ffcccf17ca6bd1ea2f2743fad16e1209d634f1e51a88dbfdc589e1dd57634299
 
 RUN apt update && apt install -y dumb-init git gcc netcat libpq-dev
 RUN rm -rf /var/lib/apt/lists/*
